@@ -1,8 +1,4 @@
-Database organization
         
-We have 2 tables for user, comment models. The role field can be administrator or
-customer.
-
 Admin User Stories:
   The administrator after logging in can:
      • modify his profile information.
