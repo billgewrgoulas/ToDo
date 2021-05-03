@@ -1,70 +1,38 @@
-###################
-What is CodeIgniter
-###################
+Database organization
+        
+We have 2 tables for user, comment models. The role field can be administrator or
+customer.
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Admin User Stories:
+  The administrator after logging in can:
+     • modify his profile information.
+     • see all registered customers and for each customer
+       can delete him, modify his profile and see
+       all his messages. When a customer is deleted then
+       all his messages are deleted.
+     • see all messages in the database and delete any of them
+       For each message we display the information of the user to whom
+       belongs as well as the message information.
+Customer User Stories:
+  A customer after logging in can:
+     • modify his profile information.
+     • create new messages.
+     • see all his messages as well as delete any of them.
+Authentication / Authorization:
 
-*******************
-Release Information
-*******************
+• Sessions were used to store each user's information after
+  login to protect endpoints.
+• A user does not have access to the application or the possibility for a request if he does not have it
+  login.
+• Based on the role of the user, we ensure that he only has access to its functions
+  correspond. A customer can only delete and see his own messages
+  as well as modify only his own profile.
+• During registration, the uniqueness of the email in the database is checked.
+Form Validation:
+• Validation has been implemented in each form.
+Extra:
+• After login we redirect the user to the home page.
+• A non-functional view has been implemented for password recovery.
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
 
-**************************
-Changelog and New Features
-**************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
-
-*******************
-Server Requirements
-*******************
-
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
