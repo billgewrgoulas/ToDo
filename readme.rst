@@ -1,12 +1,12 @@
 
 Built with:
 
-PHP: 7.3.21   
-WAMPSERVER: 3.2.3    
-CODEIGNITER: 3.1.11    
-MySQL: 8.0.21  
-URL: http://localhost:8080/todo/home (home page)    
-phpMyAdmin: http://localhost:8080/phpmyadmin/ (root account)    
+PHP: 7.3.21<br />
+WAMPSERVER: 3.2.3<br /> 
+CODEIGNITER: 3.1.11<br />
+MySQL: 8.0.21<br />
+URL: http://localhost:8080/todo/home (home page)<br />   
+phpMyAdmin: http://localhost:8080/phpmyadmin/ (root account)<br /> 
   
 Admin User Stories:
   The administrator after logging in can:
